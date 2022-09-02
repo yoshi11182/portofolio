@@ -5985,10 +5985,13 @@ textarea.form-control-lg {
 .popover-body {
   padding: 1rem 1rem;
   color: #212529;
-}
-
-.carousel {
-  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 500px;
+  height: 400px;
 }
 
 .carousel.pointer-event {
@@ -5999,6 +6002,7 @@ textarea.form-control-lg {
   position: relative;
   width: 100%;
   overflow: hidden;
+  background-color: #0aa2c0;
 }
 .carousel-inner::after {
   display: block;
@@ -11630,6 +11634,19 @@ header.masthead .masthead-heading {
 }
 
 @media (min-width: 768px) {
+
+  .timeline .timeline-right > li .timeline-image {
+    left: 75%;
+    margin-left: -50px;
+  }
+
+  .timeline > li .timeline-image {
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    margin-left: -50px;
+  }
+
   .timeline:before {
     left: 50%;
   }
@@ -11776,4 +11793,91 @@ section#contact form#contactForm :-ms-input-placeholder {
   text-align: center;
   font-size: 0.9rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+
+
+.page-section {
+  display: flex;
+}
+
+/*--------------------------------
+ Skill
+---------------------------------*/
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: -50px;
+}
+
+.skill-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 48%;
+  margin-bottom: 50px;
+}
+
+.skill-img {
+  width: 60px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.skill-body {
+  flex: 1;
+}
+
+.skill-name {
+  margin-bottom: 10px;
+}
+
+.skill-text {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* スキル全体を囲うdiv */
+.skill2 {
+  margin: 30px 0; /* 上下のマージンを指定 */
+}
+
+/* スキルの情報 */
+.skill2-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+/* スキルの熟練度（パーセンテージ） */
+.skill2-percentage {
+  opacity: 0; /* 初期状態では透明に */
+  transition: opacity 0.6s;
+}
+
+/* スキルバーの親要素 */
+.skill2-bar-container {
+  position: relative;
+  width: 100%;
+  height: 15px; /* スキルバーの高さ */
+  background-color: #f3f3f3; /* スキルバーの背景色 */
+  overflow: hidden;
+}
+
+/* スキルバー本体 */
+.skill2-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0; /* 初期状態では0 */
+  background-color: #34e8d7; /* スキルバーの色 */
+  transition: width 3s cubic-bezier(0.22, 1, 0.36, 1); /* スキルバーが伸びる速度を調整 */
+}
+
+#about {
+  padding-top: 130px;
 }
